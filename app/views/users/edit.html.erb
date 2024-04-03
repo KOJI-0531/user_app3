@@ -1,0 +1,8 @@
+
+        <%= form_tag("/users/#{@user.id}/update") do %>
+       
+        <textarea name="email"><%= @user.email %></textarea>
+        <input type="submit" value="保存">
+        <% end %>
+     
+
