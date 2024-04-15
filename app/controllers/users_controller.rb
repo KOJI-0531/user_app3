@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(email: params[:email], password: params[:password])
+    @user = User.new(user_params)
     if @user.save
       redirect_to("/index")
     end
@@ -34,5 +34,10 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to("/index")
  end
+ private
+  def user_params
+    # email: params[:email], password: params[:password]
+    params.permit(:email, :password)
+  end
   
 end

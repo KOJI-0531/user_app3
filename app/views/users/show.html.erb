@@ -1,3 +1,8 @@
 <%= @user.email %>
 <%= link_to("編集","/users/#{@user.id}/edit") %>
-<%= link_to("削除","/users/#{@user.id}/destroy", {method: "post"}) %>
+<%= button_to("削除","/users/#{@user.id}/destroy", {method: "post"}) %>
+<style>
+    button {
+        
+    }
+</style>
