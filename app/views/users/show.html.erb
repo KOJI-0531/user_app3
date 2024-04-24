@@ -1,5 +1,6 @@
 <%= @user.email %>
-<%= link_to("編集","/users/#{@user.id}/edit") %>
+<!--<%#= link_to("編集","/users/#{@user.id}/edit") %>-->
+<%= link_to "編集", edit_path(@user) %>
 <%= button_to("削除","/users/#{@user.id}/destroy", {method: "post"}) %>
 <style>
     button {
