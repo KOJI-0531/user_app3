@@ -3,7 +3,7 @@
 <!--    <input type="submit" value="保存">-->
 <!--<%# end %>-->
 
-<%= form_with model: @user, url: "/users/#{@user.id}/update" do |form| %>
+<%= form_with model: @user, url: update_path(@user.id) do |form| %>
     <label for="email">email</label>
     <%= form.text_field :email %>
     <%= form.submit %> 
