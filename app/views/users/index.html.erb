@@ -3,5 +3,7 @@
     <%= link_to user.email, show_path(user) %>
 <% end %>
 
-    <%#= link_to("新規投稿","/") %>
-    <%= link_to "新規投稿", new_path(@user) %>
+    <%= link_to "新規投稿", p_new_path(@post) %>
+    <%= link_to "新規登録", new_path(@user) %>
+    
+    <%= link_to "ログイン", login_path(@user) %>

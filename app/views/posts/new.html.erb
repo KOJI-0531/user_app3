@@ -1,0 +1,11 @@
+
+ 
+
+<h1>新規投稿</h1>
+
+<%= form_with model: @post, url: p_create_path do |form| %>
+        <label for="content"></label>
+          <%= form.text_field :content %>
+         
+          <%= form.submit %>
+<!--<% end %>-->

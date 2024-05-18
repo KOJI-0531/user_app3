@@ -1,0 +1,19 @@
+<routes.rb>
+
+ get 'login' => "users#login_form"
+ 
+ 
+ 
+ 
+<index.html>
+
+<% @users.each do |user| %>
+    <%#= link_to(user.email,"/users/#{user.id}") %>
+    <%= link_to user.email, show_path(user) %>
+<% end %>
+
+    <%#= link_to("新規投稿","/") %>
+    <%= link_to "新規登録", new_path(@user) %>
+    <!--<%#= link_to "ログイン", "#" %>-->
+    
+    <%= link_to("ログイン", "/users/login_form") %>

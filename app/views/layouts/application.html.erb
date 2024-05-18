@@ -11,6 +11,14 @@
   </head>
 
   <body>
+     <% if session[:user_id] %>
+          <li>
+            現在ログインしているユーザーのid:
+      
+            <%= session[:user_id] %>
+            <%= button_to("ログアウト", "/logout", {method: "post"}) %>
+          </li>
+        <% end %>
     <%= yield %>
   </body>
 </html>
